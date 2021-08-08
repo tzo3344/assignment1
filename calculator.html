@@ -13,7 +13,44 @@
 
 <body>
 
+   <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand " href="#" style="font-family: fantasy; font-size:50px;color: rgb(238, 202, 201);"><img src="./controller.svg"  width="150" height="100" alt="laptop.svg"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="color:black;font-size:100%">Store <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: rgb(15, 12, 12);" href="#">New&Noteworthy</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color:black;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Gategories</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+              
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="color:black;" href="#" tabindex="-1" aria-disabled="true">News</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button id  class="btn btn-outline-dark my-2 my-sm-0 text-light" type="submit" style="color: rgb(252, 15, 15);">Search</button>
+        </form>
+        </div>
 
+          
+         </nav>
   
 <div id="border" class="container mt-2"> 
 
@@ -92,10 +129,10 @@
 
     for(var i=0;i<radio.length;i++){
        if(radio[i].checked){
-         if(radio[i].id =="add" ){
+         if(radio[i].id=="add" ){
             value1=parseInt(first_number)+parseInt(second_number);
-            var sum = document.getElementById('result').innerHTML ="The sum is:  " + value1;
-            console.log(sum);
+            document.getElementById('result').innerHTML ="The sum is:  " + value1;
+            console.log(values);
          }
           else if(radio[i].id=="sub" ){
             value2 =parseInt(first_number)-parseInt(second_number);
@@ -103,13 +140,13 @@
             console.log(subtraction);                                
          
        }
-       else if(radio[i].id =="multi" ){
+       else if(radio[i].id == "multi" ){
         value3=parseInt(first_number)*parseInt(second_number);
-            var multipilcation =document.getElementById('result').innerHTML ="The multipicatiion is:  " + value3;
+            var multipilcation =document.getElementById('result').innerHTML ="The multipicatiion is:  " +value3;
             console.log(multipilcation);  
          }
-         else if(radio[i].id == "division"){
-           value4=parseInt(first_number)/parseInt(second_number);
+         else if(radio[i].id == "divison"){
+           value4=parseInt(first_number)%parseInt(second_number);
             var division =document.getElementById('result').innerHTML ="The division is:  " +  value4;
             console.log(division); 
          }
